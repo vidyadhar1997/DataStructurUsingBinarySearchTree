@@ -79,13 +79,23 @@ namespace DataStructureUsingBinarySearchTree
         {
             if(this.leftTree!=null)
             {
+                this.leftCount++;
                 this.leftTree.Display();
             }
             Console.WriteLine(this.NodeData.ToString());
             if (this.rightTree != null)
             {
+                this.rightCount++;
                 this.rightTree.Display();
             }
+        }
+
+        /// <summary>
+        /// Size method for.
+        /// </summary>
+        public void getSize()
+        {
+            Console.WriteLine("Size of BST is = " + (1 + this.leftCount + this.rightCount));
         }
     }
 }
